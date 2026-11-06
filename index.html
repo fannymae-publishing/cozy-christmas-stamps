@@ -1,6 +1,8 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Cozy Christmas Stamp Pack: 33 Printable Postage-Style Stamps</title>
+<meta property="og:title" content="Cozy Christmas Stamp Pack: 33 Printable Postage-Style Stamps">
+<meta property="og:description" content="33 printable vintage-style Christmas stamps for pen pals, snail mail, journals and planners. Instant download.">
 <meta name="description" content="33 printable vintage-style Christmas stamps for pen pals, snail mail, journals and planners. Instant download, US Letter and A4 PDFs plus 33 transparent PNGs.">
 <style>
 :root{--ink:#7a1519;--gold:#c9962b;--cream:#f3e2c4;--bg:#fbf5e9;--text:#2d2320;--card:#fffaf0}
@@ -8,6 +10,7 @@
 body{margin:0;background:var(--bg);color:var(--text);font:17px/1.65 Georgia,'Times New Roman',serif}
 .wrap{max-width:860px;margin:0 auto;padding:0 20px}
 header.hero{background:var(--ink);color:var(--cream);text-align:center;padding:56px 20px 48px}
+.brand{letter-spacing:.18em;text-transform:uppercase;font-size:13px;color:var(--gold);margin-bottom:10px}
 .hero h1{font-size:clamp(30px,6vw,48px);line-height:1.15;margin:0 0 14px;font-style:italic}
 .hero p{font-size:19px;max-width:620px;margin:0 auto 26px;opacity:.95}
 .btn{display:inline-block;background:var(--gold);color:#2b1a05;font:bold 19px Georgia,serif;padding:15px 34px;border-radius:6px;text-decoration:none;border:2px solid #e3b455}
@@ -30,6 +33,7 @@ footer{text-align:center;padding:34px 20px 50px;font-size:14px;color:#6b5a52}
 @media(max-width:640px){.shots,.cols{grid-template-columns:1fr}}
 </style></head><body>
 <header class="hero"><div class="wrap">
+<div class="brand">Fanny Mae Publishing</div>
 <h1>Cozy Christmas Stamp Pack</h1>
 <p>33 printable vintage-style postage stamps for pen pals, snail mail, journals and planners. Print, cut and stick.</p>
 <a class="btn BUYLINK" href="#" id="buy1">Get the pack, $8</a>
@@ -83,19 +87,25 @@ footer{text-align:center;padding:34px 20px 50px;font-size:14px;color:#6b5a52}
 <details><summary>What paper should I use?</summary><p>Plain paper works. Sticker paper gives you ready-to-stick stamps. Matte photo paper gives the richest color.</p></details>
 <details><summary>What if my printer shrinks the page?</summary><p>Choose "Actual size" or 100% in the print dialog, not "Fit to page".</p></details>
 <details><summary>Can I use them on mail?</summary><p>They are decoration. Put real postage on the envelope and use these beside it.</p></details>
-<details><summary>I'm having trouble with my download.</summary><p>Contact support through your order confirmation email and we will help.</p></details>
-<details><summary>Refunds</summary><p>Because this is a digital download, refunds are handled case by case. If something is wrong with your files, contact us within 14 days and we will make it right.</p></details>
+<details><summary>I'm having trouble with my download.</summary><p>Contact us through your order confirmation email<span class="supportline"></span> and we will help.</p></details>
+<details><summary>Refunds</summary><p>Because this is a digital download, refunds are handled case by case. If something is wrong with your files, contact us within 14 days<span class="supportline"></span> and we will make it right.</p></details>
 </section>
 
 <section style="text-align:center;border:none"><h2>Ready to send some holiday cheer?</h2>
 <a class="btn BUYLINK" href="#" id="buy2">Get the pack, $8</a></section>
 </main>
-<footer>&copy; Ahmazing Stores. Decorative stamps, not valid postage.<br>
+<footer>&copy; Fanny Mae Publishing. Decorative stamps, not valid postage.<br>
+<span class="supportfoot"></span>
 <!-- TODO: set BUY_URL below to the Digistore24 order link once the product is approved -->
 </footer>
 <script>
+var SUPPORT_EMAIL = "";  /* set to the support address when it exists, e.g. "help@example.com" */
 var BUY_URL = "";  /* paste Digistore24 order link here */
 if(BUY_URL){document.querySelectorAll('.BUYLINK').forEach(function(a){a.href=BUY_URL;});}
 else{document.querySelectorAll('.BUYLINK').forEach(function(a){a.classList.add('off');});}
+if(SUPPORT_EMAIL){
+  document.querySelectorAll('.supportline').forEach(function(e){e.innerHTML=' at <a href="mailto:'+SUPPORT_EMAIL+'">'+SUPPORT_EMAIL+'</a>';});
+  document.querySelectorAll('.supportfoot').forEach(function(e){e.innerHTML='Questions or refunds: <a href="mailto:'+SUPPORT_EMAIL+'">'+SUPPORT_EMAIL+'</a>';});
+}
 </script>
 </body></html>
