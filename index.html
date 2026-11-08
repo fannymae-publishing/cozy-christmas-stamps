@@ -16,6 +16,9 @@ header.hero{background:var(--ink);color:var(--cream);text-align:center;padding:5
 .btn{display:inline-block;background:var(--gold);color:#2b1a05;font:bold 19px Georgia,serif;padding:15px 34px;border-radius:6px;text-decoration:none;border:2px solid #e3b455}
 .btn:hover{background:#dba63a}
 .btn.off{opacity:.55;pointer-events:none}
+.samplerline{margin:14px 0 0;font-size:15px}
+.samplerline a{font-weight:bold;text-decoration:underline;color:#7a1f1f}
+.hero .samplerline a{color:#f3d58a}
 .price{font-size:15px;margin-top:12px;color:var(--cream)}
 section{padding:42px 0;border-bottom:1px dashed #d9c49b}
 h2{color:var(--ink);font-size:28px;margin:0 0 14px;font-style:italic}
@@ -38,6 +41,7 @@ footer{text-align:center;padding:34px 20px 50px;font-size:14px;color:#6b5a52}
 <p>33 printable vintage-style postage stamps for pen pals, snail mail, journals and planners. Print, cut and stick.</p>
 <a class="btn BUYLINK" href="#" id="buy1">Get the pack, $8</a>
 <div class="price">Instant digital download &middot; No physical item is shipped</div>
+<p class="samplerline">Want to try first? <a class="SAMPLERLINK" href="#">Get the free 6-stamp sampler</a></p>
 </div></header>
 
 <main class="wrap">
@@ -92,15 +96,17 @@ footer{text-align:center;padding:34px 20px 50px;font-size:14px;color:#6b5a52}
 </section>
 
 <section style="text-align:center;border:none"><h2>Ready to send some holiday cheer?</h2>
-<a class="btn BUYLINK" href="#" id="buy2">Get the pack, $8</a></section>
+<a class="btn BUYLINK" href="#" id="buy2">Get the pack, $8</a>
+<p class="samplerline">Not sure yet? <a class="SAMPLERLINK" href="#">Download the free sampler first</a></p></section>
 </main>
 <footer>&copy; Fanny Mae Publishing. Decorative stamps, not valid postage.<br>
 <span class="supportfoot"></span>
-<!-- TODO: set BUY_URL below to the Digistore24 order link once the product is approved -->
 </footer>
 <script>
 var SUPPORT_EMAIL = "fannymaepublishing.help@gmail.com";  /* set to the support address when it exists, e.g. "help@example.com" */
-var BUY_URL = "https://payhip.com/b/qnsOE";  /* paste Digistore24 order link here */
+var BUY_URL = "https://payhip.com/b/qnsOE";  /* Payhip product link for the full pack */
+var SAMPLER_URL = "https://payhip.com/b/tIR6q";  /* free sampler product on Payhip */
+document.querySelectorAll('.SAMPLERLINK').forEach(function(a){if(SAMPLER_URL){a.href=SAMPLER_URL;}else{a.parentNode.style.display='none';}});
 if(BUY_URL){document.querySelectorAll('.BUYLINK').forEach(function(a){a.href=BUY_URL;});}
 else{document.querySelectorAll('.BUYLINK').forEach(function(a){a.classList.add('off');});}
 if(SUPPORT_EMAIL){
